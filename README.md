@@ -10,9 +10,9 @@ This project demonstrates an **end-to-end data pipeline** using **AWS Glue** and
 ✅ **S3 Data Ingestion**: Loads cleaned data from Amazon S3 into Redshift using `COPY` command.  
 ✅ **SQL Query Optimization**: Uses **DISTKEY(order_id), SORTKEY(date, ship_state), and Partitioning** to improve query performance.  
 ✅ **Automated Workflows**:  
-   - **AWS Glue Jobs** for ETL processing.  
-   - **AWS Step Functions** to orchestrate Glue Jobs.  
-   - **Amazon EventBridge** to schedule ETL executions.  
+   - ***AWS Glue Jobs** for ETL processing.  
+   - ***AWS Step Functions** to orchestrate Glue Jobs.  
+   - ***Amazon EventBridge** to schedule ETL executions. 
 ✅ **Data Analytics**: Redshift SQL queries to derive insights such as **top-selling states** and **order category distributions**.  
 
 ---
