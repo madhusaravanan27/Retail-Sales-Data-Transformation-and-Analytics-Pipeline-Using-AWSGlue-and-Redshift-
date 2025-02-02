@@ -1,0 +1,13 @@
+{
+  "StartAt": "StartGlueJob",
+  "States": {
+    "StartGlueJob": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun",
+      "Parameters": {
+        "JobName": "RetailSalesGlueETL"
+      },
+      "End": true
+    }
+  }
+}
