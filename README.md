@@ -1,50 +1,26 @@
-Retail Sales Data Transformation and Analytics Pipeline Using AWS Glue and Redshift
+# Retail Sales Data Transformation and Analytics Pipeline Using AWS Glue and Redshift  
+**Project Duration:** Nov 2024 – Dec 2024  
 
-Overview
+## **📌 Project Overview**
+This project demonstrates an **end-to-end data pipeline** using **AWS Glue** and **Amazon Redshift** to transform, enrich, and analyze retail sales data. The goal is to **optimize data storage, enable efficient querying, and provide analytical insights** on sales performance.  
 
-This project demonstrates a serverless data pipeline using AWS Glue, Redshift, and S3 to process, transform, and analyze retail sales data. The pipeline is designed to optimize query performance, provide actionable insights, and automate ETL workflows.
+## **🚀 Key Features**
+✅ **AWS Glue ETL**: Transforms raw sales data and enriches it with derived metrics (order value categories, state-wise rankings).  
+✅ **Amazon Redshift**: Stores the transformed data for fast analytics with optimized **indexing and partitioning**.  
+✅ **S3 Data Ingestion**: Loads cleaned data from Amazon S3 into Redshift using `COPY` command.  
+✅ **SQL Query Optimization**: Uses **DISTKEY(order_id), SORTKEY(date, ship_state), and Partitioning** to improve query performance.  
+✅ **Automated Workflows**:  
+   - **AWS Glue Jobs** for ETL processing.  
+   - **AWS Step Functions** to orchestrate Glue Jobs.  
+   - **Amazon EventBridge** to schedule ETL executions.  
+✅ **Data Analytics**: Redshift SQL queries to derive insights such as **top-selling states** and **order category distributions**.  
+
+---
+
+## **🛠️ Tech Stack**
+- **Cloud & Compute**: AWS Glue, AWS Redshift, AWS Lambda, Amazon S3  
+- **Database & Querying**: Amazon Redshift, SQL  
+- **Programming & ETL**: PySpark, Python, AWS Glue Jobs  
+- **Orchestration & Automation**: AWS Step Functions, AWS EventBridge  
 
 
-Tech Stack
-
-AWS Glue: ETL processing and data transformation.
-
-Amazon Redshift: Data warehousing and analytics.
-
-Amazon S3: Data storage and staging.
-
-AWS Step Functions: Orchestration and automation.
-
-AWS EventBridge: Scheduled Glue job execution.
-
-PySpark: Data transformations.
-
-SQL: Redshift queries and optimizations.
-
-Workflow
-
-Data Ingestion
-
-Raw sales data is cleaned and uploaded to Amazon S3.
-
-ETL Processing with AWS Glue
-
-The data is extracted from S3 and transformed using PySpark in AWS Glue.
-
-New derived metrics like order_value_category and state_rank are generated.
-
-Transformed data is written back to Amazon Redshift.
-
-Redshift Optimization
-
-Partitioning by date improves query efficiency.
-
-DISTKEY(order_id) & SORTKEY(date, ship_state) optimize analytical queries.
-
-Indexing and VACUUM/ANALYZE operations enhance performance.
-
-Automation and Scheduling
-
-AWS Step Functions orchestrate the ETL workflow.
-
-AWS EventBridge schedules periodic Glue jobs.
